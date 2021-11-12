@@ -1,0 +1,75 @@
+BASIC GIT COMMANDS TO HELP ON-BOARD PROJECT
+
+-----------CLONE THE REPOSITORY
+- git clone <url>
+for examples: git clone https://github.com/zimesfield/order.git
+-After cloning the repository execute the script:
+- git branch 
+you will notice that a main branch has been automatically created by git. This is the default branch as set in github.
+And this is the only branch that exists in your local repository.
+
+
+----------CREATE A BRANCH IN YOUR LOCAL REPOSITORY
+Execute the command:
+- git checkout -b <branchName>
+where branchName is in the format agreed by the team to be "feature/#ticket_number-brief-description.
+The above script creates a new branch and switches to that branch on your local repository (repository means on your local system aka server-system storage).
+
+Execute:
+- git branch 
+to view the list of branches and ensure that the new branch has been added.
+
+
+------------ADD TO LOCAL REPOSITORY
+Work on the module on the branch and then execute:
+- git add <path of that file>
+e.g. git add src/test/java/com/zimesfield/promotion/usecase/PromotionUseCaseTest.java
+
+------------COMMIT TO LOCAL REPOSITORY
+Run the command:
+- git commit -m"<description>"
+
+------------PUSH TO REMOTE
+Run the command:
+- git push origin <branch name of the remote repository to be pushed to>
+
+
+------------MERGE FROM REMOTE TO LOCAL
+Ensure you are switched to your branch, by running:
+- git checkout -b <branch name>
+
+then execute:
+- git merge origin/<name of remote repository branch>
+
+
+
+
+
+---------------CREATING A NEW REPOSITORY
+First create a new repository in github, then
+
+Run the following in the terminal of your local computer.
+
+- git init 
+(creates local git storage).
+
+- git add README.md 
+(adds a README file to your local storage).
+
+- git commit -m "first commit" -
+(First commit to your local Storage).
+
+- git branch -M <branch name> 
+(creates your first branch "main", it can be any other branch name of your choice).
+
+- git remote add <remote name> <url> 
+(remotes or connects to github. The "remote name" can be any name of choice, and the url is provided by git hub when you create the repository).
+e.g git remote add origin https://github.com/zimesfield/training.git
+
+- git push -u <remote name> <branch name>
+(push branch to remote repository)
+e.g git push origin main
+
+
+
+
